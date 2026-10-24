@@ -1,4 +1,11 @@
 import "./style.css";
-import { message } from "./home.js";
+import { cityWeather } from "./modules/weatherAPI.js";
 
-console.log(message);
+// async function city() {
+//   const cityInfo = await cityWeather();
+//   return cityInfo;
+// }
+
+// console.dir(city());
+
+console.log(cityWeather());
