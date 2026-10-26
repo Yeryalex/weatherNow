@@ -74,10 +74,10 @@ main {
   justify-content: center;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.371);
-  height: 250px;
+  height: 270px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.117);
-  gap: 30px;
+  row-gap: 10px;
 }
 
 .temperature {
@@ -86,23 +86,35 @@ main {
 }
 
 .temperature > p {
+  padding: 10px;
   font-size: 50px;
   background-color: rgba(255, 255, 255, 0.335);
   border-radius: 10px 0 0 10px;
+  width: 70px;
 }
 
 .temperature > button {
+  width: 70px;
   padding: none;
   outline: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.223);
   border-radius: 0 10px 10px 0;
   border: none;
   font-size: 50px;
+  cursor: pointer;
+}
+
+.temperature > button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .input-container {
-  border: 1px solid white;
-  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.744);
+  border-radius: 20px;
+  height: 40px;
 }
 
 #city {
@@ -115,5 +127,16 @@ main {
 
 .button-search-city {
   border: none;
-  background-color: rgb(46, 165, 251);
+  background-color: transparent;
+  border-radius: 50%;
+  background-image: url("/src/icons/magnify.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+
+.weather-description {
+  padding-top: 10px;
 }
