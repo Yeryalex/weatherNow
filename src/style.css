@@ -57,3 +57,60 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: rgb(111, 179, 218);
+}
+
+.weather-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.371);
+  height: 250px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.117);
+  gap: 30px;
+}
+
+.temperature {
+  display: flex;
+  border-radius: 10px;
+}
+
+.temperature > p {
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.335);
+  border-radius: 10px 0 0 10px;
+}
+
+.temperature > button {
+  padding: none;
+  outline: none;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  font-size: 50px;
+}
+
+.input-container {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#city {
+  border: none;
+  /* background-color: transparent; */
+}
+
+.button-search-city {
+  border: none;
+  background-color: transparent;
+}
