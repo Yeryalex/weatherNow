@@ -107,10 +107,13 @@ main {
 
 #city {
   border: none;
-  /* background-color: transparent; */
+  background-color: transparent;
+  outline: none;
+  padding-left: 5px;
+  caret-color: white;
 }
 
 .button-search-city {
   border: none;
-  background-color: transparent;
+  background-color: rgb(46, 165, 251);
 }
