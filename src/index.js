@@ -4,7 +4,6 @@ import { FtoCelsius, CtoFahrenheit } from "./modules/utils.js";
 import { videoConditions } from "./modules/videoDisplay.js";
 import windy from "./assets/videos/windy.mp4";
 
-// const containerTemp = document.querySelector(".container-temp");
 const video = document.querySelector(".bg-video");
 const form = document.querySelector("form");
 const chosenCity = document.querySelector("#city");
@@ -29,9 +28,8 @@ form.addEventListener("submit", async (e) => {
   }
   const formattedCityName = cityInfo.resolvedAddress.split(",");
   temperature = cityInfo.currentConditions.temp;
-
-  buttonTemp.classList.add("button-temp", "Fahrenheit");
   buttonTemp.textContent = "Fº";
+  buttonTemp.classList.add("Fahrenheit");
 
   cityName.textContent = formattedCityName[0];
   const conditions = cityInfo.currentConditions.conditions.split(",")[0];
@@ -47,7 +45,6 @@ form.addEventListener("submit", async (e) => {
   buttonTemp.style.display = "block";
   generalInfo.style.display = "grid";
   form.reset();
-  console.log(cityInfo);
 });
 
 buttonTemp.addEventListener("click", () => {
