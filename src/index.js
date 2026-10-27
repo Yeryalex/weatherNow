@@ -1,5 +1,7 @@
 import "./style.css";
 import { cityWeather } from "./modules/weatherAPI.js";
+import partlyCloudy from "./assets/videos/partly_cloudy.mp4";
+const video = document.querySelector(".bg-video");
 
 const form = document.querySelector("form");
 const chosenCity = document.querySelector("#city");
@@ -8,6 +10,9 @@ const tempValue = document.querySelector(".temp-value");
 const buttonTemp = document.querySelector(".button-temp");
 const weatherDescription = document.querySelector(".weather-description");
 let temperature = null;
+
+video.src = partlyCloudy;
+// video.load();
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
