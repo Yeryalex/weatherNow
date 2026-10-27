@@ -16,9 +16,9 @@ function videoConditions(conditions) {
   if (conditions.includes("cloudy")) return objectWeather(cloudy, "#87898933");
   if (conditions.includes("Overcast"))
     return objectWeather(overcast, "#25306733");
-  if (conditions.includes("Rain")) return objectWeather(rainy, "#2e4b62b7");
   if (conditions.includes("Storm") || conditions.includes("thunder"))
     return objectWeather(storm, "#50515243");
+  if (conditions.includes("Rain")) return objectWeather(rainy, "#2e4b62b7");
   if (conditions.includes("snow")) return objectWeather(snow, "#3a53514d");
   if (conditions.includes("wind") || conditions.includes("windy"))
     return objectWeather(windy, "#2e4b627e");
