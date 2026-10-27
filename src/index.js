@@ -1,6 +1,8 @@
 import "./style.css";
 import { cityWeather } from "./modules/weatherAPI.js";
-import partlyCloudy from "./assets/videos/partly_cloudy.mp4";
+import { FtoCelsius, CtoFahrenheit } from "./modules/utils.js";
+import weather from "./modules/videoDisplay.js";
+
 const video = document.querySelector(".bg-video");
 
 const form = document.querySelector("form");
@@ -11,8 +13,8 @@ const buttonTemp = document.querySelector(".button-temp");
 const weatherDescription = document.querySelector(".weather-description");
 let temperature = null;
 
-video.src = partlyCloudy;
-// video.load();
+video.src = weather[0];
+video.playbackRate = 0.8;
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -46,13 +48,3 @@ buttonTemp.addEventListener("click", () => {
     buttonTemp.classList.toggle("Fahrenheit");
   }
 });
-
-function FtoCelsius(temp) {
-  const celsius = (temp - 32) * (5 / 9);
-  return celsius;
-}
-
-function CtoFahrenheit(temp) {
-  const fahrenheit = temp * (9 / 5) + 32;
-  return fahrenheit;
-}
